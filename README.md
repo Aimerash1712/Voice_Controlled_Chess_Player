@@ -1,67 +1,84 @@
-♟️ Voice Controlled Chess Game
-A Python-based voice-controlled chess game where you make moves by speaking commands instead. The game uses Speech Recognition for input and Pygame for the graphical chessboard.
+# ♟️ Voice-Controlled Chess
 
-✅ Features
-Voice-controlled moves (e.g., say E2E4 or C7C6)
+A simple Python chess game you can play with your voice. Make moves by speaking standard chess notation (e.g., `c6c7`, `3637`).
 
-Interactive GUI for the chessboard
+---
 
-Move validation using chess rules
+## 🚀 How to Run
 
-Standard chess gameplay
+1. **Download the Files**
 
-Real-time speech recognition
+   * `chess.py`
+   * `gui.py`
+   * `images/` (folder with chess piece images)
 
-📂 Project Structure
-voice-chess/
-|
-├── chess.py         # Core game logic: move validation, piece movement
-├── gui.py           # Main file to run the game (loads GUI and voice input)
-├── images/          # Folder containing chess piece images
-└── README.md        # Project documentation
+   Keep all these in the **same folder**.
 
-🛠️ Requirements
-Python 3.x
+2. **Install Dependencies**
 
-Dependencies:
+   ```bash
+   pip install pygame SpeechRecognition pyaudio python-chess
+   ```
 
-speechrecognition
+   > Typical dependencies include `pygame`, `speechrecognition`, `pyaudio`, `chess`.
 
-pygame
+3. **Run the Game**
 
-pillow
+   ```bash
+   python gui.py
+   ```
 
-pyaudio (for microphone input)
+---
 
-numpy
+## 🎮 How to Play
 
-⚙️ Installation
-1. Download the Files
-Download the chess.py and gui.py files and place them in the same folder. Ensure the images folder is also in the same directory.
+1. **Launch the Game** – Run `python gui.py`.
+2. **Speak Your Move** – Use legal voice commands such as:
 
-2. Install the Dependencies
-Open your terminal or command prompt and install the required packages by running this command:
+   * `c6c7`
+   * `3637`
+3. **Speak Clearly** – For accurate speech recognition, reduce background noise and speak at a steady pace.
+4. **Continue Playing** – Play proceeds until **checkmate**, **stalemate**, or **draw**.
 
-pip install speechrecognition pygame pillow pyaudio numpy
+---
 
-▶️ How to Run the Game
-Run the gui.py file from your terminal:
+## 🗣️ Supported Speech Patterns
 
-python gui.py
+* **Coordinate moves**: `c6c7`, `3637`
 
-🎮 How to Play the Game
-Launch the game using the command above.
+> The game currently supports coordinate-style input for voice commands.
 
-The chessboard GUI will appear.
+---
 
-Use voice commands in standard chess notation.
+## ⚙️ Requirements
 
-Example commands:
+* **Python** 3.9+
+* **Audio Input**: A working microphone
+* **Libraries** (typical):
 
-E2E4 → Move pawn from E2 to E4
+  * `SpeechRecognition`
+  * `PyAudio` *(on some systems you may need system-level install: e.g., `brew install portaudio` on macOS)*
+  * `pygame`
+  * `python-chess`
 
-C7C6 → Move pawn from C7 to C6
+---
 
-Speak clearly and wait for the move to process.
+## 🔧 Troubleshooting
 
-Continue until checkmate or draw.
+* **Microphone not detected**: Ensure OS mic permissions are enabled for your terminal/app.
+* **`PyAudio` install fails**: Install PortAudio first (e.g., `brew install portaudio` on macOS, `sudo apt-get install portaudio19-dev` on Debian/Ubuntu), then `pip install pyaudio`.
+* **Moves not recognized**: Speak slowly, try different phrasing, or type the move if your GUI supports manual input.
+
+---
+
+
+## 🙌 Acknowledgements
+
+* Built with ❤️ using Python and open-source libraries.
+
+---
+
+## 👤 Author
+
+**Amey Somvanshi**
+IIT Roorkee
